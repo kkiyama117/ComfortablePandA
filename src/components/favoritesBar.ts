@@ -77,8 +77,11 @@ export async function createFavoritesBar(settings: Settings, entities: EntityPro
         defaultTab[j].classList.add(tabClass);
         */
         if(tabClass !== "") {   // If not duePassed
+            // 1. タブ全体（li要素）にクラスを追加し、タブの背景を塗る
+            defaultTab[j].classList.add(tabClass);
+            
             if (aTag) {
-                // リンクのテキスト部分に色付けのクラスを追加
+                // 2. リンクテキスト（a要素）にも同じクラスを追加し、文字色を変える
                 aTag.classList.add(tabClass);
             }
         }
